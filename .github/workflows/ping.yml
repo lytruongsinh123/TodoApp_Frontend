@@ -1,0 +1,16 @@
+name: Ping Azure and React App
+
+on:
+  schedule:
+    - cron: "*/2 * * * *" # Mỗi 2 phút
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping backend (Azure App Service)
+        run: curl -fsS https://todoappsupport-gagmedarhmgsancb.koreacentral-01.azurewebsites.net/tasks -o /dev/null
+
+      - name: Ping frontend (React App)
+        run: curl -fsS https://todoapp.hungproject.app -o /dev/null
