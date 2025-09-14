@@ -1,0 +1,93 @@
+.filter-task-table-wrapper {
+    width: 80%;
+    overflow-x: auto;
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-task-table {
+    width: 98%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #23244a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px #0004;
+    min-width: 700px;
+    margin: 10px 10px 20px 10px;
+}
+
+.filter-task-table th,
+.filter-task-table td {
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 1.08em;
+    vertical-align: middle;
+    border-bottom: 1px solid #2e2f4a;
+    white-space: nowrap;
+}
+
+.filter-task-table th {
+    background: #181a2a;
+    color: #5ff281;
+    font-weight: 900;
+    font-size: 1.12em;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.filter-task-table tr:last-child td {
+    border-bottom: none;
+}
+
+.filter-task-table tr:nth-child(even) {
+    background: #23244a;
+}
+
+.filter-task-table tr:nth-child(odd) {
+    background: #1a1b2a;
+}
+
+.filter-task-title {
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+    word-break: break-word;
+}
+
+.filter-task-desc {
+    color: #b5ffe1;
+    font-style: italic;
+    max-width: 320px;
+    white-space: normal;
+    word-break: break-word;
+    display: block;
+}
+
+.filter-task-table td {
+    color: #fff;
+    font-weight: 500;
+}
+
+.filter-task-table td[style*="color: #5ff281"] {
+    font-weight: 700;
+}
+
+.filter-task-table td[style*="color: #ffb300"] {
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .filter-task-table {
+        min-width: 480px;
+        font-size: 0.98em;
+    }
+    .filter-task-table th,
+    .filter-task-table td {
+        padding: 8px 4px;
+    }
+    .filter-task-desc {
+        max-width: 120px;
+    }
+}

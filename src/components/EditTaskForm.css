@@ -1,0 +1,126 @@
+
+.edit-task-form {
+    background: #23244a;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #0005;
+    padding: 32px 32px 24px 32px;
+    max-width: 480px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    min-width: 320px;
+    animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.edit-task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.edit-task-header h2 {
+    font-size: 1.4rem;
+    color: #5ff281;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.edit-task-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #38bdf8;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.edit-task-close:hover {
+    color: #5ff281;
+}
+.edit-task-fields {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+.edit-task-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.edit-task-field label {
+    font-weight: 600;
+    color: #5ff281;
+    margin-bottom: 6px;
+}
+.edit-task-field input,
+.edit-task-field select,
+.edit-task-field textarea {
+    background: #181a2e;
+    border: 1.5px solid #38bdf8;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 12px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    outline: none;
+    transition: border 0.2s;
+}
+.edit-task-field input:focus,
+.edit-task-field select:focus,
+.edit-task-field textarea:focus {
+    border-color: #5ff281;
+}
+.edit-task-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 18px;
+}
+.edit-task-save {
+    background: linear-gradient(90deg, #5ff281 0%, #38bdf8 100%);
+    color: #181a2a;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.edit-task-save:hover {
+    background: linear-gradient(90deg, #38bdf8 0%, #5ff281 100%);
+    color: #fff;
+}
+.edit-task-cancel {
+    background: none;
+    border: 1.5px solid #38bdf8;
+    color: #38bdf8;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.edit-task-cancel:hover {
+    background: #38bdf8;
+    color: #181a2a;
+}
+@media (max-width: 600px) {
+    .edit-task-form {
+        padding: 18px 6px 12px 6px;
+        min-width: unset;
+    }
+    .edit-task-fields {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

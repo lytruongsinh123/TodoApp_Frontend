@@ -1,0 +1,50 @@
+.task-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: radial-gradient(circle at 20% 30%, #38bdf844 0, #181a2a00 60%),
+        radial-gradient(circle at 80% 70%, #5ff28133 0, #181a2a00 60%),
+        linear-gradient(120deg, #181a2a 60%, #23244a 100%);
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.task-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #38bdf8 0%, #181a2a00 80%);
+    opacity: 0.18;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.task-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 8vw;
+    bottom: 8vh;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, #5ff281 0%, #181a2a00 80%);
+    opacity: 0.14;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.task-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 0 64px 0;
+}
+.ReactModal__Content {
+    margin: 15px !important;
+}

@@ -1,0 +1,178 @@
+/* Modal custom styles */
+.ReactModal__Overlay {
+    background: rgba(24, 24, 47, 0.75) !important;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ReactModal__Content {
+    position: static !important;
+    inset: unset !important;
+    background: #23234a !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 32px #1a1a2e55 !important;
+    padding: 40px 38px 32px 38px !important;
+    max-width: 540px;
+    width: 98vw;
+    border: none !important;
+    color: #fff;
+    margin: 0 auto;
+    outline: none;
+}
+.modal-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: linear-gradient(90deg, #5ff281 0%, #38bdf8 100%);
+    color: #18182f;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s, color 0.2s;
+}
+.modal-close-btn:hover {
+    background: linear-gradient(90deg, #38bdf8 0%, #5ff281 100%);
+    color: #fff;
+}
+
+/* FORM LAYOUT NGANG HIỆN ĐẠI */
+.task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 24px;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.task-form-group {
+    flex: 1 1 160px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.task-form label {
+    color: #5ff281;
+    font-size: 1rem;
+    margin-bottom: 7px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+}
+.task-form input[type="text"],
+.task-form input[type="date"],
+.task-form select,
+.task-form textarea {
+    height: 48px;
+    padding: 0 16px;
+    border: 1.5px solid #38bdf8;
+    border-radius: 10px;
+    font-size: 17px;
+    outline: none;
+    background: #23234a;
+    color: #fff;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    margin-bottom: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+.task-form input[type="text"]:focus,
+.task-form input[type="date"]:focus,
+.task-form select:focus,
+.task-form textarea:focus {
+    border: 2px solid #5ff281;
+    box-shadow: 0 0 0 2px #5ff28133;
+    background: #18182f;
+}
+.task-form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.7) sepia(1) saturate(5) hue-rotate(80deg);
+}
+.task-form textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 180px;
+    padding-top: 12px;
+    resize: vertical;
+    width: 100%;
+}
+.task-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #23234a;
+    color: #38bdf8;
+    font-weight: 600;
+    border-radius: 10px;
+    height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.task-form select:focus {
+    color: #5ff281;
+}
+.task-form input::placeholder,
+.task-form textarea::placeholder {
+    color: #38bdf8cc;
+    opacity: 1;
+    font-size: 1em;
+}
+.task-form-actions {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+}
+.task-form button {
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #5ff281 0%, #38bdf8 100%);
+    color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #5ff28122;
+    min-width: 120px;
+}
+.task-form button:hover {
+    background: linear-gradient(90deg, #38bdf8 0%, #5ff281 100%);
+    color: #fff;
+}
+@media (max-width: 800px) {
+    .ReactModal__Content {
+        padding: 18px 6vw 18px 6vw !important;
+        max-width: 98vw;
+    }
+    .task-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .task-form-group {
+        min-width: 0;
+    }
+    .task-form input[type="text"],
+    .task-form input[type="date"],
+    .task-form select,
+    .task-form textarea {
+        padding: 10px 8px;
+        font-size: 15px;
+        height: 40px;
+    }
+    .task-form textarea {
+        min-height: 60px;
+        height: auto;
+    }
+    .task-form-actions {
+        margin-top: 6px;
+    }
+}
